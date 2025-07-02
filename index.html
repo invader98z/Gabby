@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Para Mi Amor</title>
+</head>
+<body style="margin:0; overflow:hidden; background:white; position:relative; height:100vh; font-family: 'Comic Sans MS', cursive;">
+
+  <!-- Franja roja romántica en el centro -->
+  <div style="
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    background: linear-gradient(to bottom, #ff4d4d, #ff1a1a);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    z-index: 0;">
+  </div>
+
+  <!-- Mensaje romántico -->
+  <div style="
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    z-index: 2;">
+    <p>Para mi</p>
+    <p>amorcito</p>
+    <p>Gabby💖</p>
+    <p>cada flecha <p>
+    </p> pedacito de mi</p>
+    <p>Corazón...</p>
+  </div>
+
+  <!-- Osito tierno -->
+  <img id="osito" src="https://media1.tenor.com/m/uvr9UiICe_QAAAAC/cute-heart.gif" alt="Osito" style="
+    position: absolute;
+    bottom: 340px;
+    left: 165px;
+    width: 650px;
+    z-index: 1;">
+
+  <!-- Flechas contenedor -->
+  <div id="contenedorFlechas"></div>
+
+  <script>
+    const contenedor = document.getElementById('contenedorFlechas');
+
+    function lanzarFlecha() {
+      const flecha = document.createElement('img');
+      flecha.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emoji_u1f498.svg/2048px-Emoji_u1f498.svg.png';
+      flecha.style.position = 'absolute';
+      flecha.style.width = '40px';
+      flecha.style.height = '40px';
+      flecha.style.left = '150px';
+      flecha.style.bottom = '150px';
+      flecha.style.zIndex = '2';
+
+      contenedor.appendChild(flecha);
+
+      let x = 150;
+      let y = 150;
+
+      const intervalo = setInterval(() => {
+        x += 5;
+        y += Math.sin(x / 25) * 2;
+        flecha.style.left
